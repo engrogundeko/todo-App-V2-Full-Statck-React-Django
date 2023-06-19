@@ -7,6 +7,7 @@ class Task(models.Model):
         ('MEDIUM', 'Medium'),
         ('LOW', 'Low',)
     ]
+    id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=50)
     description = models.CharField(max_length=255)
     date = models.DateTimeField(auto_now_add=True)

@@ -4,10 +4,20 @@ from rest_framework.response import Response
 from .serializers import TaskList
 from .models import Task
 
+
 class UserViewSet(viewsets.ModelViewSet):
    
     queryset = Task.objects.all()
-    serializer_class = TaskList  # Specify the serializer class
+    serializer_class = TaskList  
+
+# class CreateUser(generics.CreateAPIView):
+#     queryset = Task.objects.all()
+#     serializer_class = TaskList  
+
+# class ListUser(generics.ListAPIView):
+#     queryset = Task.objects.all()
+#     serializer_class = TaskList  
+
 
     # def list(self, request):
     #     serializer = self.serializer_class(self.queryset, many=True)  # Instantiate the serializer
